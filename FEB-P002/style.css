@@ -1,0 +1,123 @@
+.gridContainer {
+    width: 600px;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 1fr 1fr 20%;
+    gap: 10px 5px;
+    text-align: center;
+}
+
+span {
+    background-color: lightcoral; 
+}
+
+header {
+    background-color: darkcyan; 
+    grid-column: 1 / -1;
+}
+
+nav {
+    background-color: lightsalmon; 
+    grid-row: 2 / 5;
+}
+
+.noticias {
+    background-color: mediumslateblue; 
+    grid-row: 2 / 5;
+}
+
+.destaque {
+    background-color: goldenrod; 
+    grid-row: 2 / 5;
+    grid-column: 3;
+}
+
+.containerImg {
+    padding: 15px; 
+}
+
+.containerImg, img {
+    width: 120px; 
+    height: 120px; 
+}
+
+.servicos {
+    background-color: orangered; 
+    grid-row: 5 / 8;
+    grid-column: 1 / 2;
+}
+
+.resultados {
+    width: 400px;
+    background-color: mediumseagreen; 
+    grid-column: 2 / -1;
+    grid-row: 5 / 8;
+}
+
+footer {
+    background-color: midnightblue; 
+    grid-row: 8 / -1;
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 150px) and (max-width: 500px) {
+    .gridContainer {
+        display: grid;
+        grid-template-rows: repeat(13, 75px);
+        grid-template-columns: 3fr;
+        gap: 10px 0;
+        text-align: center;
+    }
+
+    header {
+        background-color: darkcyan; 
+        grid-column: 1;
+    }
+
+    nav {
+        background-color: lightsalmon; 
+        grid-row: 2 / 4;
+    }
+
+    .noticias {
+        background-color: mediumslateblue; 
+        grid-row: 4 / 7;
+        grid-column: 1;
+    }
+
+    .destaque {
+        background-color: goldenrod; 
+        grid-row: 7 / 9;
+        grid-column: 1;
+    }
+
+    .containerImg {
+        padding: 15px; 
+    }
+
+    .containerImg, img:nth-child(2) {
+        display: none;
+    }
+
+    .containerImg, img:nth-child(1) {
+        width: 300px; 
+        display: inline-block;
+    }
+
+    .servicos {
+        background-color: orangered; 
+        grid-row: 9 / 11;
+    }
+
+    .resultados {
+        background-color: mediumseagreen; 
+        grid-row: 11 / 13;
+        grid-column: 1;
+    }
+
+    footer {
+        background-color: midnightblue;
+        grid-row: 13 / 14;
+        grid-column: 1;
+    }
+}
