@@ -70,6 +70,42 @@
             <button class="buy-button">Comprar</button>
         </div>
     </div>
+
+    <hr />
+
+    <div class="form-container">
+        <form id="pacoteForm">
+            <label for="destino">Destino:</label>
+            <input type="text" id="destino" name="destino" required>
+
+            <label for="idaVolta">Áereo ida e volta:</label>
+            <input type="text" id="idaVolta" name="idaVolta" required>
+
+            <label for="diarias">Diárias:</label>
+            <input type="text" id="diarias" name="diarias" required>
+
+            <label for="cafeManha">Café da manhã:</label>
+            <input type="text" id="cafeManha" name="cafeManha" required>
+
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco" required>
+
+            <label for="taxas">Taxas inclusas:</label>
+            <input type="text" id="taxas" name="taxas" required>
+
+            <label for="parcelamento">Em até:</label>
+            <input type="text" id="parcelamento" name="parcelamento" required>
+
+            <label for="imagem">URL da Imagem:</label>
+            <input type="text" id="imagem" name="imagem" required>
+
+            <button type="button" onclick="inserirDestino()">Inserir</button>
+        </form>
+    </div>
+
+    <div class="container-destinos"></div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

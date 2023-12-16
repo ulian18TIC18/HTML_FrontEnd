@@ -1,23 +1,39 @@
-function capturarInformacoes(destino, idaVolta, diarias, cafeManha, preco, taxas, parcelamento) {
+function inserirDestino() {
+    const form = document.getElementById('pacoteForm');
 
-    const card = document.querySelector('.card');
-    const header = card.querySelector('header h3').innerText;
-    const listaItens = card.querySelectorAll('ul li');
-    const precoInfo = card.querySelector('div h2').innerText;
-    const taxasInfo = card.querySelector('div span:nth-child(1)').innerText;
-    const parcelamentoInfo = card.querySelector('div span:nth-child(2)').innerText;
+    const destino = form.destino.value;
+    const idaVolta = form.idaVolta.value;
+    const diarias = form.diarias.value;
+    const cafeManha = form.cafeManha.value;
+    const preco = form.preco.value;
+    const taxas = form.taxas.value;
+    const parcelamento = form.parcelamento.value;
+    const imagem = form.imagem.value;
 
+    const novoDestino = document.createElement('div');
+    novoDestino.classList.add('card');
 
-    const pacoteTuristico = {
-        destino: header,
-        aereoIdaVolta: listaItens[0].innerText,
-        diarias: listaItens[1].innerText,
-        cafeManha: listaItens[2].innerText,
-        preco: precoInfo,
-        taxas: taxasInfo,
-        parcelamento: parcelamentoInfo,
-    };
+    novoDestino.innerHTML = `
+        <header>
+            <img src="${imagem}" alt="">
+            <h3>${destino}</h3>
+        </header>
+        <main>
+            <ul>
+                <li>${idaVolta}</li>
+                <li>${diarias}</li>
+                <li>${cafeManha}</li>
+            </ul>
+            <div>
+                <h2>${preco}</h2>
+                <span>${taxas}</span>
+                <span>${parcelamento}</span>
+            </div>
+        </main>
+        <button class="buy-button">Comprar</button>
+    `;
 
+    document.querySelector('.container-destinos').appendChild(novoDestino);
 
-    console.log(JSON.stringify(pacoteTuristico));
+    form.reset();
 }
