@@ -1,0 +1,132 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #f2f2f2;
+    color: rgb(54, 62, 130);
+}
+
+header {
+    background-color: #02172c;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+
+.conteudo {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quadrados, .quadrados2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 15px;
+}
+
+
+
+.quadrado {
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quadradonoticias {
+    background-color: #dddddd;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quadradodestaque {
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quadradoresultados {
+    background-color: #dddddd;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 900px;
+}
+
+.miniquadrado{
+    background-color: #02172c;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer {
+    background-color: #02172c;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+    nav {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 499px) {
+    nav {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
