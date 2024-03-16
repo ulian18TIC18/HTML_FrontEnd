@@ -13,21 +13,21 @@
 }
 
 span {
-    background-color: lightcoral; 
+    background-color: #1695F0; 
 }
 
 header {
-    background-color: darkcyan; 
+    background-color: #2016F0; 
     grid-column: 1 / -1;
 }
 
 nav {
-    background-color: lightsalmon; 
+    background-color: #1650F0; 
     grid-row: 2 / 5;
 }
 
 .noticias {
-    background-color: mediumslateblue; 
+    background-color: #33DDF0; 
     grid-row: 2 / 5;
 }
 
@@ -54,7 +54,7 @@ nav {
 
 .resultados {
     width: 400px;
-    background-color: mediumseagreen; 
+    background-color: #658BF0; 
     grid-column: 2 / -1;
     grid-row: 5 / 8;
 }
@@ -115,13 +115,13 @@ footer {
     }
 
     .resultados {
-        background-color: mediumseagreen; 
+        background-color: rgb(23, 151, 80); 
         grid-row: 11 / 13;
         grid-column: 1;
     }
 
     footer {
-        background-color: midnightblue;
+        background-color: rgb(177, 177, 212);
         grid-row: 13 / 14;
         grid-column: 1;
     }
